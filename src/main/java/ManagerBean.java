@@ -19,6 +19,17 @@ public class ManagerBean{
 
 	}
 
+	public ArrayList<Formation> formationList;
+	
+	public ArrayList<Formation>getFormationList(){
+
+		formationList = new ArrayList<>();
+		formationList.add(new Formation(0,"DSI","2 ans"));
+
+		return formationList;
+
+	}
+
     public String getVersion() {
         return version;
     }
