@@ -10,32 +10,32 @@
 
 <h:head>
 
-    <title>Liste des formations (Manager v#{manager.version} )</title>
+    <title>Liste des promotions (Manager v#{manager.version} )</title>
 
 </h:head>
 
 <h:body>
 
 
-    <h:dataTable value="#{manager.formationList}" var="s"
-    styleClass="formation-table"
-    headerClass="formation-table-header"
-    rowClasses="formation-table-odd-row,student-table-even-row">
+    <h:dataTable value="#{manager.promotionList}" var="s"
+    styleClass="promotion-table"
+    headerClass="promotion-table-header"
+    rowClasses="promotion-table-odd-row,student-table-even-row">
 <h:column>
 <!-- column header -->
-<f:facet name="header">N° de formation</f:facet>
+<f:facet name="header">Année</f:facet>
 <!-- row record attribute -->
-#{s.id}
+#{s.annee}
 </h:column>
 
 <h:column>
-<f:facet name="header">Nom</f:facet>
-#{s.name}
+<f:facet name="header">Formation</f:facet>
+#{s.form}
 </h:column>
 
 <h:column>
-<f:facet name="header">Durée</f:facet>
-#{s.duree}
+<f:facet name="header">Etudiant</f:facet>
+#{s.etud}
 </h:column>
 
 </h:dataTable>
