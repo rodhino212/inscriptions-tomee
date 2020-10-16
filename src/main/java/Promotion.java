@@ -1,14 +1,15 @@
+import java.time.Year;
 
 public class Promotion {
-    private String annee;
+    private Year annee;
     private String form;
     private String etud;
 
-    public String getAnnee(){
+    public Year getAnnee(){
     return annee;
     }
 
-    public void setAnnee (String annee){ 
+    public void setAnnee (Year annee){ 
         this.annee = annee; 
     }
 
@@ -29,7 +30,7 @@ public class Promotion {
         this.etud = etud;
     }
 
-    public Promotion(String annee, String form, String etud) {
+    public Promotion(Year annee, String form, String etud) {
         this.annee = annee;
         this.form = form;
         this.etud = etud;

@@ -1,3 +1,4 @@
+import java.time.Year;
 import java.util.ArrayList;
 import javax.faces.bean.ManagedBean;
 
@@ -37,15 +38,18 @@ public class ManagerBean{
 
 	}
 
-	//public Year y = Year.now();
+	public Year y = Year.now();
+	public Year t = Year.of(2017);
+	public Year f = Year.of(2018);
+	public Year d = Year.of(2019);
 	public ArrayList<Promotion> promotionList;
 
 	public ArrayList<Promotion>getPromotionList(){
 		promotionList = new ArrayList<>();
-		promotionList.add(new Promotion("2020","Licence COM","Jennifer"));
-		promotionList.add(new Promotion("2019","Licence math","Jeanne"));
-		promotionList.add(new Promotion("2019","Licence de lettres","Chris"));
-		promotionList.add(new Promotion("2018","Licence info","Paulo"));
+		promotionList.add(new Promotion(y,"Licence COM","Jennifer"));
+		promotionList.add(new Promotion(t,"Licence math","Jeanne"));
+		promotionList.add(new Promotion(f,"Licence de lettres","Chris"));
+		promotionList.add(new Promotion(d,"Licence info","Paulo"));
 
 		return promotionList;
 
