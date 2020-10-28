@@ -4,15 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+//import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
-
-
 @Named("manager")
-@RequestScoped  
-@Deprecated
+//@RequestScoped
 public class ManagerBean{
 
 	private String version = "1.0-SNAPSHOT";
@@ -110,7 +106,8 @@ public class ManagerBean{
 		return promotionList;
 	}
 
-    public String getVersion() {
+
+	public String getVersion(){
         return version;
 	}
 	
