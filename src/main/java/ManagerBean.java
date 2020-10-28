@@ -5,10 +5,14 @@ import java.util.Arrays;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.inject.Named;
 
 
 
-@ManagedBean(name="manager")
+@Named("manager")
+@RequestScoped  
+@Deprecated
 public class ManagerBean{
 
 	private String version = "1.0-SNAPSHOT";
