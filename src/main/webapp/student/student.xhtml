@@ -6,7 +6,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
          xmlns:f="http://java.sun.com/jsf/core"
          xmlns:h="http://java.sun.com/jsf/html"
-         xmlns:ui="http://java.sun.com/jsf/facelets">
+         xmlns:ui="http://java.sun.com/jsf/facelets"
+         xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 
@@ -17,7 +18,7 @@
 <h:body>
 
 
-    <h:dataTable value="#{manager.studentList}" var="s"
+    <h:dataTable value="#{manager.studentList}" var="z"
     styleClass="student-table"
     headerClass="student-table-header"
     rowClasses="student-table-odd-row,student-table-even-row">
@@ -25,27 +26,27 @@
 <!-- column header -->
 <f:facet name="header">Étudiant N°</f:facet>
 <!-- row record attribute -->
-#{s.id}
+#{z.id}
 </h:column>
 
-<h:column>
-<f:facet name="header">Nom</f:facet>
-#{s.lastName}
-</h:column>
+<!--<h:column>
+    <f:facet name="header">Nom</f:facet>
+    <h:form>
+        <h:commandLink action="#{manager.showStudent}" value="#{z.lastName}">
+            <f:param name="id" value="#{z.id}"/>
+        </h:commandLink>
+    </h:form>
+</h:column>-->
+
+<!--<p:remoteCommand name="jambon" action="#{manager.showStudent}" out="student"/> -->
 
 <h:column>
-<f:facet name="header">Prénom</f:facet>
-#{s.firstName}
-</h:column>
-
-<h:column>
-<f:facet name="header">Date de Naissance</f:facet>
-#{s.birthdate}
-</h:column>
-
-<h:column>
-<f:facet name="header">Téléphone</f:facet>
-#{s.phoneNumber}
+    <f:facet name="header">Nom</f:facet>
+    <h:form>
+        <h:link value="#{z.lastName}" onclick="e()" outcome="show_student.xhtml">
+            <f:param name="id" value="#{z.id}"/>
+        </h:link>
+    </h:form>
 </h:column>
 
 </h:dataTable>

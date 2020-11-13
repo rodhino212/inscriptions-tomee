@@ -1,9 +1,12 @@
 import java.time.Year;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+
 //import javax.faces.bean.RequestScoped;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.context.FacesContext;
 
 
 //@Deprecated
@@ -62,7 +65,25 @@ public class ManagerBean{
 	);
 
 	public List<Promotion>getpromotionList(){
-		return promotionList;
+		return promotionList; 
+	}
+
+	
+
+	private Etudiant student = new Etudiant();
+
+	public Etudiant getStudent(){
+
+		return student;
+	}
+	private FacesContext fc = FacesContext.getCurrentInstance();
+
+	public String showStudent(){
+		Map<String,String> params = fc.getExternalContext().getRequestParameterMap();
+
+		int id = Integer.parseInt(params.get("id"));
+		student = studentList.get(id);
+		return "show_student.xhtml";
 	}
 
 	public String getVersion(){
