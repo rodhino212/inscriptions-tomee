@@ -70,6 +70,19 @@ public class ManagerBean {
 		return studentList.get(num);
 	}
 
+	public Formation showFormation() {
+		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
+
+		int id = Integer.parseInt(params.get("id"));
+		int num = 0;
+		for (int k = 0; formationList.size() > k; k++) {
+			if (formationList.get(k).getId() == id) {
+				num = k;
+			}
+		}
+		return formationList.get(num);
+	}
+
 	public String getVersion() {
 		return version;
 	}

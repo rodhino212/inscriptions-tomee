@@ -10,14 +10,14 @@
 
 <h:head>
 
-    <title>Liste des formations (Manager v#{manager.version} )</title>
+    <title>Détails de la formation (Manager v#{manager.version} )</title>
 
 </h:head>
 
 <h:body>
 
 
-    <h:dataTable value="#{manager.formationList}" var="s"
+    <h:dataTable value="#{manager.showFormation()}" var="f"
     styleClass="formation-table"
     headerClass="formation-table-header"
     rowClasses="formation-table-odd-row,student-table-even-row">
@@ -25,17 +25,17 @@
 <!-- column header -->
 <f:facet name="header">N° de formation</f:facet>
 <!-- row record attribute -->
-#{s.id}
+#{f.id}
 </h:column>
 
 <h:column>
 <f:facet name="header">Nom</f:facet>
-#{s.name}
+#{f.name}
 </h:column>
 
 <h:column>
 <f:facet name="header">Durée</f:facet>
-#{s.duree}
+#{f.duree}
 </h:column>
 
 </h:dataTable>

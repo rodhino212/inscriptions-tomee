@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+         xmlns:f="http://java.sun.com/jsf/core"
+         xmlns:h="http://java.sun.com/jsf/html"
+         xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+    <title>Liste des formations (Manager v#{manager.version} )</title>
+
+</h:head>
+
+<h:body>
+
+
+    <h:dataTable value="#{manager.formationList}" var="f"
+    styleClass="formation-table"
+    headerClass="formation-table-header"
+    rowClasses="formation-table-odd-row,student-table-even-row">
+<h:column>
+<!-- column header -->
+<f:facet name="header">N° de formation</f:facet>
+<!-- row record attribute -->
+#{f.id}
+</h:column>
+
+<h:column>
+<f:facet name="header">Nom</f:facet>
+            <h:form>
+                <h:link value="#{f.name}" outcome="show_formation">
+                    <f:param name="id" value="#{f.id}" />
+                </h:link>  
+            </h:form>
+</h:column>
+
+</h:dataTable>
+
+</h:body>
+
+</html>
