@@ -3,11 +3,8 @@
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml"
-         xmlns:f="http://java.sun.com/jsf/core"
-         xmlns:h="http://java.sun.com/jsf/html"
-         xmlns:ui="http://java.sun.com/jsf/facelets"
-         xmlns:p="http://primefaces.org/ui">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 
@@ -18,38 +15,25 @@
 <h:body>
 
 
-    <h:dataTable value="#{manager.studentList}" var="z"
-    styleClass="student-table"
-    headerClass="student-table-header"
-    rowClasses="student-table-odd-row,student-table-even-row">
-<h:column>
-<!-- column header -->
-<f:facet name="header">Étudiant N°</f:facet>
-<!-- row record attribute -->
-#{z.id}
-</h:column>
+    <h:dataTable value="#{manager.studentList}" var="z" styleClass="student-table" headerClass="student-table-header"
+        rowClasses="student-table-odd-row,student-table-even-row">
+        <h:column>
+            <!-- column header -->
+            <f:facet name="header">Étudiant N°</f:facet>
+            <!-- row record attribute -->
+            #{z.id}
+        </h:column>
 
-<!--<h:column>
-    <f:facet name="header">Nom</f:facet>
-    <h:form>
-        <h:commandLink action="#{manager.showStudent}" value="#{z.lastName}">
-            <f:param name="id" value="#{z.id}"/>
-        </h:commandLink>
-    </h:form>
-</h:column>-->
+        <h:column>
+            <f:facet name="header">Nom</f:facet>
+            <h:form>
+                <h:link value="#{z.lastName}" outcome="show_student">
+                    <f:param name="id" value="#{z.id}" />
+                </h:link>  
+            </h:form>
+        </h:column>
 
-<!--<p:remoteCommand name="jambon" action="#{manager.showStudent}" out="student"/> -->
-
-<h:column>
-    <f:facet name="header">Nom</f:facet>
-    <h:form>
-        <h:link value="#{z.lastName}" onclick="e()" outcome="show_student.xhtml">
-            <f:param name="id" value="#{z.id}"/>
-        </h:link>
-    </h:form>
-</h:column>
-
-</h:dataTable>
+    </h:dataTable>
 
 
 
