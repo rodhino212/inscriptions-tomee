@@ -17,7 +17,7 @@
 <h:body>
 
 
-    <h:dataTable value="#{manager.promotionList}" var="s"
+    <h:dataTable value="#{manager.showPromotion()}" var="p"
     styleClass="promotion-table"
     headerClass="promotion-table-header"
     rowClasses="promotion-table-odd-row,student-table-even-row">
@@ -25,17 +25,17 @@
 <!-- column header -->
 <f:facet name="header">Année</f:facet>
 <!-- row record attribute -->
-#{s.annee}
+#{p.annee}
 </h:column>
 
 <h:column>
 <f:facet name="header">Formation</f:facet>
-#{s.form}
+#{p.form}
 </h:column>
 
 <h:column>
 <f:facet name="header">Etudiant</f:facet>
-#{s.etud}
+#{p.etud}
 </h:column>
 
 </h:dataTable>

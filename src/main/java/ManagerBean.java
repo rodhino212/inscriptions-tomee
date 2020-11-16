@@ -83,6 +83,19 @@ public class ManagerBean {
 		return formationList.get(num);
 	}
 
+	public Promotion showPromotion() {
+		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
+
+		String id = params.get("id");
+		int num = 0;
+		for (int p = 0; promotionList.size() > p; p++) {
+			if (promotionList.get(p).getForm().equals(id)) {
+				num = p;
+			}
+		}
+		return promotionList.get(num);
+	}
+
 	public String getVersion() {
 		return version;
 	}
