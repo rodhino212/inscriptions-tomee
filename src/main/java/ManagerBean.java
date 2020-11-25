@@ -62,6 +62,7 @@ public class ManagerBean {
 
 		int id = Integer.parseInt(params.get("id"));
 		int num = 0;
+		// String nom;
 		for (int f = 0; studentList.size() > f; f++) {
 			if (studentList.get(f).getId() == id) {
 				num = f;
@@ -94,6 +95,62 @@ public class ManagerBean {
 			}
 		}
 		return promotionList.get(num);
+	}
+
+	public String getLastName() {
+		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
+
+		int id = Integer.parseInt(params.get("edit"));
+		int num = 0;
+		// String nom;
+		for (int f = 0; studentList.size() > f; f++) {
+			if (studentList.get(f).getId() == id) {
+				num = f;
+			}
+		}
+		return studentList.get(num).getLastName();
+	}
+
+	public String getFirstname() {
+		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
+
+		int id = Integer.parseInt(params.get("edit"));
+		int num = 0;
+		// String nom;
+		for (int f = 0; studentList.size() > f; f++) {
+			if (studentList.get(f).getId() == id) {
+				num = f;
+			}
+		}
+		return studentList.get(num).getFirstName();
+	}
+
+	public String getBirthdate() {
+		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
+
+		int id = Integer.parseInt(params.get("edit"));
+		int num = 0;
+		// String nom;
+		for (int f = 0; studentList.size() > f; f++) {
+			if (studentList.get(f).getId() == id) {
+				num = f;
+			}
+		}
+		return studentList.get(num).getBirthdate();
+	}
+
+	public String getPhoneNumber() {
+		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
+
+		int id = Integer.parseInt(params.get("edit"));
+		int num = 0;
+		// String nom;
+		for (int f = 0; studentList.size() > f; f++) {
+			if (studentList.get(f).getId() == id) {
+				num = f;
+			}
+		}
+		return studentList.get(num).getPhoneNumber();
 	}
 
 	public String getVersion() {

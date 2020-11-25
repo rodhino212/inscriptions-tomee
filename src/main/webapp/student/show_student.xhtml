@@ -8,7 +8,7 @@
 
 <h:head>
 
-    <title>Détails de l'étudiant (Manager v#{manager.version})</title>
+    <title>Détails de l'étudiant</title>
 
 </h:head>
 
@@ -44,6 +44,13 @@
         <h:column>
             <f:facet name="header">Téléphone</f:facet>
             #{s.phoneNumber}
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Éditer</f:facet>
+                <h:link value="édition" outcome="edit_student">
+                    <f:param name="edit" value="#{s.id}" />
+                </h:link> 
         </h:column>
 
     </h:dataTable>
