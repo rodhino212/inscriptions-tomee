@@ -9,6 +9,7 @@ public class Etudiant {
     
 	/** 
 	 * Récupère l'id de l'étudiant
+	 * 
 	 * @return int identifiant unique d'un étudiant
 	 */
 	public int getId() {
@@ -18,6 +19,7 @@ public class Etudiant {
 	
 	/** 
 	 * Définition de l'id de létudiant
+	 * 
 	 * @param id identifiant unique d'un étudiant
 	 */
 	public void setId(int id) {
@@ -27,6 +29,7 @@ public class Etudiant {
 	
 	/** 
 	 * récupère le nom de l'étudiant
+	 * 
 	 * @return Prénom de l'étudiant
 	 */
 	public String getFirstName() {
@@ -36,6 +39,7 @@ public class Etudiant {
 	
 	/** 
 	 * Définition du prénom de l'étudiant
+	 * 
 	 * @param firstName prénom de l'étudiant
 	 */
 	public void setFirstName(String firstName) {
@@ -45,6 +49,7 @@ public class Etudiant {
 	
 	/** 
 	 * récupère le nom de l'étudiant
+	 * 
 	 * @return Nom de l'étudiant
 	 */
 	public String getLastName() {
@@ -54,6 +59,7 @@ public class Etudiant {
 	
 	/** 
 	 * Définition du nom de l'étudiant
+	 * 
 	 * @param lastName nom de l'étudiant
 	 */
 	public void setLastName(String lastName) {
@@ -63,6 +69,7 @@ public class Etudiant {
 	
 	/** 
 	 * récupère la date de naissance de l'étudiant 
+	 * 
 	 * @return Date de naissance de l'étudiant
 	 */
 	public String getBirthdate() {
@@ -72,6 +79,7 @@ public class Etudiant {
 	
 	/** 
 	 * Définition de la date de naissance de l'étudiant
+	 * 
 	 * @param birthdate Date de naissance de l'étudiant
 	 */
 	public void setBirthDate(String birthdate) {
@@ -81,6 +89,7 @@ public class Etudiant {
     
 	/** 
 	 * récupère le numéro de téléphone de l'étudiant
+	 * 
 	 * @return Téléphone de l'étudiant
 	 */
 	public String getPhoneNumber() {
@@ -90,6 +99,7 @@ public class Etudiant {
 	
 	/** 
 	 * Définition du téléphone de l'étudiant
+	 * 
 	 * @param phoneNumber Téléphone de l'étudiant
 	 */
 	public void setPhoneNumber(String phoneNumber) {
@@ -105,6 +115,7 @@ public class Etudiant {
 
 	 /** 
 	 * Constructeur de la classe Etudiant qui permet la définition d'un étudiant à travers les paramètres suivant :
+	 * 
 	 * @param id identifiant unique de l'etudiant par un numéro
 	 * @param lastName nom de famille de l'étudiant
 	 * @param firstname prenom de l'étudiant
