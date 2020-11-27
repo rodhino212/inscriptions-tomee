@@ -22,7 +22,8 @@ public class ManagerBean {
 
 	
 	/** 
-	 * @return List<Etudiant> retourne la liste de tout les étudiants
+	 * Methode qui permet le retour de la liste d'étudiant
+	 * @return retourne la liste de tout les étudiants
 	 */
 	public List<Etudiant> getStudentList() {
 		return studentList;
@@ -41,7 +42,8 @@ public class ManagerBean {
 
 	
 	/** 
-	 * @return List<Formation> retourne la liste de toute les formations
+	 * Methode qui permet le retour de la liste de formations
+	 * @return retourne la liste de toute les formations
 	 */
 	public List<Formation> getformationList() {
 
@@ -69,7 +71,8 @@ public class ManagerBean {
 
 	
 	/** 
-	 * @return List<Promotion> retourne la liste de toute les promotions
+	 * Methode qui permet le retour de la liste de promotions
+	 * @return retourne la liste de toute les promotions
 	 */
 	public List<Promotion> getpromotionList() {
 		return promotionList;
@@ -80,7 +83,7 @@ public class ManagerBean {
 	private FacesContext fc = FacesContext.getCurrentInstance();	
 	/** 
 	 * Methode qui permet l'affichage du détails de l'étudiant
-	 * @return Etudiant retourne l'étudiant lor d'un clic sur son nom
+	 * @return retourne l'étudiant lor d'un clic sur son nom
 	 */
 	public Etudiant showStudent() {
 		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
@@ -101,7 +104,7 @@ public class ManagerBean {
 
 	/** 
 	 * Methode qui permet l'affichafe du détails d'une formation
-	 * @return Formation retourne une formation lors d'un clic sur son nom
+	 * @return retourne une formation lors d'un clic sur son nom
 	 */
 	public Formation showFormation() {
 		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
@@ -121,8 +124,7 @@ public class ManagerBean {
 	
 	/** 
 	 * Méthode qui permet l'affichage du détails d'une promotion
-	 * @return Promotion retourne la promotioon lors du clic sur son année
-	 * Ce return renverra la promotion sélectionné lors du clic
+	 * @return retourne la promotioon lors du clic sur son nom
 	 */
 	public Promotion showPromotion() {
 		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
@@ -140,7 +142,7 @@ public class ManagerBean {
 	
 	/** 
 	 * récupère le nom de famille de l'étudiant pour l'édition
-	 * @return String nom de l'étudiant
+	 * @return nom de l'étudiant
 	 */
 	public String getLastName() {
 		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
@@ -161,7 +163,7 @@ public class ManagerBean {
 
 	/** 
 	 * récupère le prénom de l'étudiant pour l'édition
-	 * @return String prénom de l'étudiant
+	 * @return prénom de l'étudiant
 	 */
 	public String getFirstname() {
 		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
@@ -182,7 +184,7 @@ public class ManagerBean {
 
 	/** 
 	 * récupère la date de naissance de l'étudiant pour l'édition
-	 * @return String date de naissance de l'étudiant
+	 * @return date de naissance de l'étudiant
 	 */
 	public String getBirthdate() {
 		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
@@ -203,7 +205,7 @@ public class ManagerBean {
 
 	/** 
 	 * récupère le téléphone de l'étudiant pour l'édition
-	 * @return String téléphone de l'étudiant
+	 * @return téléphone de l'étudiant
 	 */
 	public String getPhoneNumber() {
 		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
@@ -221,7 +223,10 @@ public class ManagerBean {
 
 
 
-
+	/** 
+	 * récupère la version SNAPSHOT du projet de la variable private version
+	 * @return la version SNAPSHOT du projet
+	 */
 	public String getVersion() {
 		return version;
 	}

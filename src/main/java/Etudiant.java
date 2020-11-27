@@ -8,6 +8,7 @@ public class Etudiant {
 
     
 	/** 
+	 * Récupère l'id de l'étudiant
 	 * @return int identifiant unique d'un étudiant
 	 */
 	public int getId() {
@@ -25,7 +26,8 @@ public class Etudiant {
 
 	
 	/** 
-	 * @return String Prénom de l'étudiant
+	 * récupère le nom de l'étudiant
+	 * @return Prénom de l'étudiant
 	 */
 	public String getFirstName() {
 		return this.firstName;
@@ -42,7 +44,8 @@ public class Etudiant {
 
 	
 	/** 
-	 * @return String Nom de l'étudiant
+	 * récupère le nom de l'étudiant
+	 * @return Nom de l'étudiant
 	 */
 	public String getLastName() {
 		return this.lastName;
@@ -59,7 +62,8 @@ public class Etudiant {
 
 	
 	/** 
-	 * @return String Date de naissance de l'étudiant
+	 * récupère la date de naissance de l'étudiant 
+	 * @return Date de naissance de l'étudiant
 	 */
 	public String getBirthdate() {
 		return this.birthdate;
@@ -76,7 +80,8 @@ public class Etudiant {
     
     
 	/** 
-	 * @return String Téléphone de l'étudiant
+	 * récupère le numéro de téléphone de l'étudiant
+	 * @return Téléphone de l'étudiant
 	 */
 	public String getPhoneNumber() {
 		return phoneNumber;
@@ -92,19 +97,19 @@ public class Etudiant {
     }
 	
 	/** 
-	* Class constructor.
+	* Constructeur de la classe Etudiant vide
 	*/
     public Etudiant() {
 
 	}
 
-	/** 
-	 * class constructor qui permet la définition d'un étudiant
-	 * @param id 
-	 * @param lastName
-	 * @param firstname
-	 * @param phoneNumber
-	 * @param birthdate
+	 /** 
+	 * Constructeur de la classe Etudiant qui permet la définition d'un étudiant à travers les paramètres suivant :
+	 * @param id identifiant unique de l'etudiant par un numéro
+	 * @param lastName nom de famille de l'étudiant
+	 * @param firstname prenom de l'étudiant
+	 * @param phoneNumber téléphone de l'étudiant
+	 * @param birthdate date de naissance de l'étudiant
 	 */
 	public Etudiant(int id, String lastName, String firstName, String phoneNumber, String birthdate) {
 		this.id = id;
