@@ -38,5 +38,15 @@ public class APIrest extends Application{
         return Response.status(Status.ACCEPTED).build();
     }
 
+    @GET
+    @Path("/etudiant/1")
+    @Produces("text/html")
+    public Response method2() throws IOException {
+        String myJsfPage = "/student/show_student.xhtml";
+        String contextPath = request.getContextPath();
+        response.sendRedirect(contextPath + myJsfPage);
+        return Response.status(Status.ACCEPTED).build();
+    }
+
 
 }
