@@ -2,13 +2,13 @@ import java.time.Year;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 
 @Named("manager")
 @RequestScoped
+
 public class ManagerBean {
 
 	private String version = "1.0-SNAPSHOT";
@@ -24,7 +24,8 @@ public class ManagerBean {
 	/** 
 	 * Methode qui permet le retour de la liste d'étudiant
 	 * @return retourne la liste de tout les étudiants
-	 */
+	 */    
+
 	public List<Etudiant> getStudentList() {
 		return studentList;
 	}
@@ -85,6 +86,7 @@ public class ManagerBean {
 	 * Methode qui permet l'affichage du détails de l'étudiant
 	 * @return retourne l'étudiant lor d'un clic sur son nom
 	 */
+
 	public Etudiant showStudent() {
 		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
 
